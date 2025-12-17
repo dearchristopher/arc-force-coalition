@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 const guides = [
-  { slug: "tuning-fardriver-for-torque", title: "Tuning your FarDriver for torque first" },
+  { slug: "tuning-fardriver-for-torque", title: "Tuning your FarDriver for controllable torque" },
   { slug: "regen-setup-dont-kill-pack", title: "Regen setup and how not to kill a pack" },
   { slug: "troubleshooting-delayed-throttle", title: "Troubleshooting: delayed throttle / cutouts / throttle fail" },
   { slug: "first-ride-checklist", title: "First ride checklist" },
@@ -16,9 +16,9 @@ function GuidesPage() {
     <div className="space-y-8">
       <header className="space-y-3">
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Guides</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">Guides that protect torque builds</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Guides for predictable, durable builds</h1>
         <p className="text-muted-foreground text-lg">
-          Deep dives anchored in FarDriver tuning, regen safety, and real troubleshooting notes.
+          Deep dives anchored in FarDriver tuning, regen safety, and real troubleshooting notes—no hype, just what works.
         </p>
       </header>
 

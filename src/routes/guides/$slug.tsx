@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 const guideMap: Record<string, { title: string; outline: string[] }> = {
   "tuning-fardriver-for-torque": {
-    title: "Tuning your FarDriver for torque first",
+    title: "Tuning your FarDriver for controllable torque",
     outline: [
       "Line vs phase current and why torque needs both in balance.",
       "Throttle mapping that avoids wheel spin while keeping snap.",

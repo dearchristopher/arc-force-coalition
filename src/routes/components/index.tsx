@@ -48,9 +48,9 @@ function ComponentsPage() {
     <div className="space-y-8">
       <header className="space-y-3">
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Components</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">Torque-safe parts library</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Parts that stay reliable in real riding</h1>
         <p className="text-muted-foreground text-lg">
-          Batteries, controllers, motors, and gearing tuned for torque-first EV builds with repeatable results.
+          Batteries, controllers, motors, and gearing explained by how they ride—control, heat, durability, and whether the spend is justified.
         </p>
       </header>
 

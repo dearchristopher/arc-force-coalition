@@ -10,7 +10,7 @@ function Page() {
   return (
     <VoltageDetail
       title="72V"
-      feel="Maximum torque-first potential. Unforgiving to weak packs and sloppy gearing."
+      feel="Maximum torque potential. Unforgiving to weak packs and sloppy gearing."
       pricing={[
         { label: "Budget", notes: "Not recommended; risk of BMS trips and pack damage." },
         { label: "Mid", notes: "Only if BMS continuous is honest 150A+ with solid cooling." },

@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 const steps = [
   "Enter pack voltage, amp-hours, and an honest average watts draw.",
   "Pick a riding style preset (cruise, mixed, aggressive) to sanity check.",
-  "Output: estimated range and suggested buffer so you do not over-discharge torque-focused packs.",
+  "Output: estimated range and suggested buffer so you do not over-discharge high-output packs.",
 ];
 
 export const Route = createFileRoute("/tools/range")({

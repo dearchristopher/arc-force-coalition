@@ -4,7 +4,7 @@ const tools = [
   {
     title: "Speed estimator",
     to: "/tools/speed",
-    body: "RPM + wheel size + gearing to predict speed and remind you to gear down for torque.",
+    body: "RPM + wheel size + gearing to predict speed and remind you to gear down for control and headroom.",
   },
   {
     title: "Range estimator",
@@ -27,9 +27,9 @@ function ToolsPage() {
     <div className="space-y-8">
       <header className="space-y-3">
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Tools</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">Calculators built for torque-first</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Calculators built for real-world outcomes</h1>
         <p className="text-muted-foreground text-lg">
-          Estimators that favor safe gearing, realistic range, and honest controller current limits.
+          Estimators that favor controllable gearing, realistic range, and honest controller current limits.
         </p>
       </header>
 

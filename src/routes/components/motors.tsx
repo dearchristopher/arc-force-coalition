@@ -17,7 +17,7 @@ function Page() {
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Components</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Motors</h1>
         <p className="text-muted-foreground text-lg">
-          Focused on MY1020 and similar setups tuned for torque-first riding.
+          Focused on MY1020 and similar setups tuned for controllable torque.
         </p>
       </header>
       <div className="space-y-3">

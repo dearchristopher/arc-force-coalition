@@ -1,14 +1,14 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 const basics = [
-  "Voltage vs amps vs gearing: how they trade torque, heat, and top speed.",
-  "Safety first: wiring, fusing, connectors, and chain alignment that stays put.",
-  "Common mistakes: controller current set higher than the pack, sloppy throttle calibration, ignored regen limits.",
+  "Voltage vs current vs gearing: framed by ride feel, heat, and control—not spec-sheet bragging.",
+  "Safety and reliability: wiring, fusing, connectors, and chain alignment that hold up in grass, yards, and trails.",
+  "Common mistakes: controller current set above pack limits, sloppy throttle/regen setup, ignoring BMS acceptance.",
 ];
 
 const deeperLinks = [
   { title: "Compare Power Systems", to: "/compare", note: "Voltage tiers by feel and cost" },
-  { title: "Controllers", to: "/components/controllers", note: "FarDriver-first, torque-safe settings" },
+  { title: "Controllers", to: "/components/controllers", note: "FarDriver-first settings for controllable torque" },
   { title: "Motors", to: "/components/motors", note: "MY1020 focus with mounting + cooling notes" },
   { title: "Gearing", to: "/components/gearing", note: "Sprocket swaps and chain choices" },
 ];
@@ -20,9 +20,10 @@ function StartPage() {
     <div className="space-y-10">
       <header className="space-y-3">
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Start Here</p>
-        <h1 className="text-3xl font-bold sm:text-4xl">Torque-first orientation</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">Real-world build orientation</h1>
         <p className="text-muted-foreground text-lg">
-          Before you spend, know what actually changes torque, what breaks first, and how to keep a build repeatable.
+          Before you spend, learn what actually changes control and reliability—and what breaks first—so every dollar
+          moves you toward a predictable, durable ride.
         </p>
       </header>
 

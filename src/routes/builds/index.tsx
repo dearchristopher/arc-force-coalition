@@ -4,7 +4,7 @@ const builds = [
   {
     slug: "my1020-72260-72v-20ah",
     title: "MY1020 + 72260 + 72v 20Ah",
-    summary: "Baseline torque-first combo with gearing for grip.",
+    summary: "Baseline high-torque combo geared for grip and control.",
     voltage: "72v",
     pack: "72v 20Ah, 200A cont BMS",
     controller: "FarDriver 72260",
@@ -26,7 +26,7 @@ const builds = [
   {
     slug: "my1020-96120-48v-25ah",
     title: "MY1020 + 96120 + 48v 25Ah",
-    summary: "Entry voltage with torque focus and cooler temps.",
+    summary: "Entry voltage with solid pull and cooler temps.",
     voltage: "48v",
     pack: "48v 25Ah, 90A cont BMS",
     controller: "FarDriver 96120",
@@ -47,7 +47,7 @@ function BuildsPage() {
         <p className="text-xs uppercase tracking-[0.3em] text-secondary">Build Library</p>
         <h1 className="text-3xl font-bold sm:text-4xl">Repeatable builds</h1>
         <p className="text-muted-foreground text-lg">
-          Early library of torque-first builds. Filterable list comes later; for now, browse curated examples.
+          Early library of ride-tested builds. Filterable list comes later; for now, browse curated examples.
         </p>
       </header>
 

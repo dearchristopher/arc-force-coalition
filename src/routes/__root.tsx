@@ -21,7 +21,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Arc Force Coalition',
       },
     ],
     links: [
@@ -83,15 +83,11 @@ function RootLayout() {
             to="/"
             className="flex items-center gap-3 text-lg font-semibold tracking-tight"
           >
-            <div className="bg-primary/20 text-primary flex size-10 items-center justify-center rounded-md border border-primary/40 font-black">
-              ⚡
-            </div>
-            <span className="leading-tight">
-              Arc Force
-              <span className="block text-sm font-normal text-muted-foreground">
-                Verified EV Builds
-              </span>
-            </span>
+            <img
+              src="/arc-force-logo.png"
+              alt="Arc Force Coalition"
+              className="h-12 w-auto drop-shadow-sm"
+            />
           </Link>
           <nav className="hidden flex-1 items-center gap-4 text-sm font-medium md:flex">
             {navLinks.map((item) => (
@@ -127,7 +123,7 @@ function RootLayout() {
       </main>
       <footer className="border-t border-border bg-background/80">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-sm text-muted-foreground md:px-6">
-          <span>Torque-first EV builds. Verified, not vibes.</span>
+          <span>Real electric builds for controllability, reliability, and sane costs.</span>
           <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-foreground">
               About

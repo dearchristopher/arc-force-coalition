@@ -22,7 +22,7 @@ const voltages = [
   {
     slug: "72v",
     title: "72V",
-    feel: "Max torque-first potential; unforgiving to weak packs.",
+    feel: "Maximum torque potential; unforgiving to weak packs.",
     pricing: "Premium packs and controllers only; gear down smartly.",
   },
 ];
