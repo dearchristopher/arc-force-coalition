@@ -5,10 +5,12 @@ import {
   Scripts,
   createRootRoute,
 } from '@tanstack/react-router'
+import { useState } from 'react'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import appCss from '../styles.css?url'
+import { Menu } from 'lucide-react'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -75,6 +77,8 @@ const utilityLinks = [
 ]
 
 function RootLayout() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
@@ -100,7 +104,7 @@ function RootLayout() {
               </Link>
             ))}
           </nav>
-          <div className="ml-auto flex items-center gap-3 text-sm">
+          <div className="ml-auto hidden items-center gap-3 text-sm md:flex">
             {utilityLinks.map((item) => (
               <Link
                 key={item.to}
@@ -116,7 +120,39 @@ function RootLayout() {
               </Link>
             ))}
           </div>
+          <button
+            type="button"
+            className="ml-auto flex items-center rounded-md border border-border px-3 py-2 text-sm font-semibold text-foreground shadow-sm transition hover:bg-muted md:hidden"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            aria-expanded={mobileOpen}
+            aria-label="Toggle navigation"
+          >
+            <Menu />
+          </button>
         </div>
+        {mobileOpen ? (
+          <div className="border-t border-border bg-background/95 shadow-sm md:hidden">
+            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-sm font-medium">
+              {[...navLinks, ...utilityLinks].map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="rounded-md px-3 py-2 text-foreground transition hover:bg-muted"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <span className="flex items-center gap-2">
+                    {item.label}
+                    {item.soon && (
+                      <span className="bg-secondary/20 text-secondary rounded-full px-2 py-0.5 text-[11px] font-semibold">
+                        soon
+                      </span>
+                    )}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </header>
       <main className="mx-auto max-w-6xl flex-1 px-4 py-10 md:px-6 md:py-14">
         <Outlet />
