@@ -9,38 +9,336 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UpdatesRouteImport } from './routes/updates'
+import { Route as StartRouteImport } from './routes/start'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ToolsIndexRouteImport } from './routes/tools/index'
+import { Route as GuidesIndexRouteImport } from './routes/guides/index'
+import { Route as ComponentsIndexRouteImport } from './routes/components/index'
+import { Route as CompareIndexRouteImport } from './routes/compare/index'
+import { Route as BuildsIndexRouteImport } from './routes/builds/index'
+import { Route as ToolsSpeedRouteImport } from './routes/tools/speed'
+import { Route as ToolsRangeRouteImport } from './routes/tools/range'
+import { Route as ToolsCurrentCheckRouteImport } from './routes/tools/current-check'
+import { Route as GuidesSlugRouteImport } from './routes/guides/$slug'
+import { Route as ComponentsMotorsRouteImport } from './routes/components/motors'
+import { Route as ComponentsGearingRouteImport } from './routes/components/gearing'
+import { Route as ComponentsControllersRouteImport } from './routes/components/controllers'
+import { Route as ComponentsBatteriesRouteImport } from './routes/components/batteries'
+import { Route as Compare72vRouteImport } from './routes/compare/72v'
+import { Route as Compare60vRouteImport } from './routes/compare/60v'
+import { Route as Compare52vRouteImport } from './routes/compare/52v'
+import { Route as Compare48vRouteImport } from './routes/compare/48v'
+import { Route as BuildsSlugRouteImport } from './routes/builds/$slug'
 
+const UpdatesRoute = UpdatesRouteImport.update({
+  id: '/updates',
+  path: '/updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ToolsIndexRoute = ToolsIndexRouteImport.update({
+  id: '/tools/',
+  path: '/tools/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesIndexRoute = GuidesIndexRouteImport.update({
+  id: '/guides/',
+  path: '/guides/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComponentsIndexRoute = ComponentsIndexRouteImport.update({
+  id: '/components/',
+  path: '/components/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareIndexRoute = CompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildsIndexRoute = BuildsIndexRouteImport.update({
+  id: '/builds/',
+  path: '/builds/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsSpeedRoute = ToolsSpeedRouteImport.update({
+  id: '/tools/speed',
+  path: '/tools/speed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsRangeRoute = ToolsRangeRouteImport.update({
+  id: '/tools/range',
+  path: '/tools/range',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToolsCurrentCheckRoute = ToolsCurrentCheckRouteImport.update({
+  id: '/tools/current-check',
+  path: '/tools/current-check',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesSlugRoute = GuidesSlugRouteImport.update({
+  id: '/guides/$slug',
+  path: '/guides/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComponentsMotorsRoute = ComponentsMotorsRouteImport.update({
+  id: '/components/motors',
+  path: '/components/motors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComponentsGearingRoute = ComponentsGearingRouteImport.update({
+  id: '/components/gearing',
+  path: '/components/gearing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComponentsControllersRoute = ComponentsControllersRouteImport.update({
+  id: '/components/controllers',
+  path: '/components/controllers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComponentsBatteriesRoute = ComponentsBatteriesRouteImport.update({
+  id: '/components/batteries',
+  path: '/components/batteries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Compare72vRoute = Compare72vRouteImport.update({
+  id: '/compare/72v',
+  path: '/compare/72v',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Compare60vRoute = Compare60vRouteImport.update({
+  id: '/compare/60v',
+  path: '/compare/60v',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Compare52vRoute = Compare52vRouteImport.update({
+  id: '/compare/52v',
+  path: '/compare/52v',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Compare48vRoute = Compare48vRouteImport.update({
+  id: '/compare/48v',
+  path: '/compare/48v',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildsSlugRoute = BuildsSlugRouteImport.update({
+  id: '/builds/$slug',
+  path: '/builds/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/start': typeof StartRoute
+  '/updates': typeof UpdatesRoute
+  '/builds/$slug': typeof BuildsSlugRoute
+  '/compare/48v': typeof Compare48vRoute
+  '/compare/52v': typeof Compare52vRoute
+  '/compare/60v': typeof Compare60vRoute
+  '/compare/72v': typeof Compare72vRoute
+  '/components/batteries': typeof ComponentsBatteriesRoute
+  '/components/controllers': typeof ComponentsControllersRoute
+  '/components/gearing': typeof ComponentsGearingRoute
+  '/components/motors': typeof ComponentsMotorsRoute
+  '/guides/$slug': typeof GuidesSlugRoute
+  '/tools/current-check': typeof ToolsCurrentCheckRoute
+  '/tools/range': typeof ToolsRangeRoute
+  '/tools/speed': typeof ToolsSpeedRoute
+  '/builds': typeof BuildsIndexRoute
+  '/compare': typeof CompareIndexRoute
+  '/components': typeof ComponentsIndexRoute
+  '/guides': typeof GuidesIndexRoute
+  '/tools': typeof ToolsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/start': typeof StartRoute
+  '/updates': typeof UpdatesRoute
+  '/builds/$slug': typeof BuildsSlugRoute
+  '/compare/48v': typeof Compare48vRoute
+  '/compare/52v': typeof Compare52vRoute
+  '/compare/60v': typeof Compare60vRoute
+  '/compare/72v': typeof Compare72vRoute
+  '/components/batteries': typeof ComponentsBatteriesRoute
+  '/components/controllers': typeof ComponentsControllersRoute
+  '/components/gearing': typeof ComponentsGearingRoute
+  '/components/motors': typeof ComponentsMotorsRoute
+  '/guides/$slug': typeof GuidesSlugRoute
+  '/tools/current-check': typeof ToolsCurrentCheckRoute
+  '/tools/range': typeof ToolsRangeRoute
+  '/tools/speed': typeof ToolsSpeedRoute
+  '/builds': typeof BuildsIndexRoute
+  '/compare': typeof CompareIndexRoute
+  '/components': typeof ComponentsIndexRoute
+  '/guides': typeof GuidesIndexRoute
+  '/tools': typeof ToolsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/start': typeof StartRoute
+  '/updates': typeof UpdatesRoute
+  '/builds/$slug': typeof BuildsSlugRoute
+  '/compare/48v': typeof Compare48vRoute
+  '/compare/52v': typeof Compare52vRoute
+  '/compare/60v': typeof Compare60vRoute
+  '/compare/72v': typeof Compare72vRoute
+  '/components/batteries': typeof ComponentsBatteriesRoute
+  '/components/controllers': typeof ComponentsControllersRoute
+  '/components/gearing': typeof ComponentsGearingRoute
+  '/components/motors': typeof ComponentsMotorsRoute
+  '/guides/$slug': typeof GuidesSlugRoute
+  '/tools/current-check': typeof ToolsCurrentCheckRoute
+  '/tools/range': typeof ToolsRangeRoute
+  '/tools/speed': typeof ToolsSpeedRoute
+  '/builds/': typeof BuildsIndexRoute
+  '/compare/': typeof CompareIndexRoute
+  '/components/': typeof ComponentsIndexRoute
+  '/guides/': typeof GuidesIndexRoute
+  '/tools/': typeof ToolsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/start'
+    | '/updates'
+    | '/builds/$slug'
+    | '/compare/48v'
+    | '/compare/52v'
+    | '/compare/60v'
+    | '/compare/72v'
+    | '/components/batteries'
+    | '/components/controllers'
+    | '/components/gearing'
+    | '/components/motors'
+    | '/guides/$slug'
+    | '/tools/current-check'
+    | '/tools/range'
+    | '/tools/speed'
+    | '/builds'
+    | '/compare'
+    | '/components'
+    | '/guides'
+    | '/tools'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/start'
+    | '/updates'
+    | '/builds/$slug'
+    | '/compare/48v'
+    | '/compare/52v'
+    | '/compare/60v'
+    | '/compare/72v'
+    | '/components/batteries'
+    | '/components/controllers'
+    | '/components/gearing'
+    | '/components/motors'
+    | '/guides/$slug'
+    | '/tools/current-check'
+    | '/tools/range'
+    | '/tools/speed'
+    | '/builds'
+    | '/compare'
+    | '/components'
+    | '/guides'
+    | '/tools'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/start'
+    | '/updates'
+    | '/builds/$slug'
+    | '/compare/48v'
+    | '/compare/52v'
+    | '/compare/60v'
+    | '/compare/72v'
+    | '/components/batteries'
+    | '/components/controllers'
+    | '/components/gearing'
+    | '/components/motors'
+    | '/guides/$slug'
+    | '/tools/current-check'
+    | '/tools/range'
+    | '/tools/speed'
+    | '/builds/'
+    | '/compare/'
+    | '/components/'
+    | '/guides/'
+    | '/tools/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  StartRoute: typeof StartRoute
+  UpdatesRoute: typeof UpdatesRoute
+  BuildsSlugRoute: typeof BuildsSlugRoute
+  Compare48vRoute: typeof Compare48vRoute
+  Compare52vRoute: typeof Compare52vRoute
+  Compare60vRoute: typeof Compare60vRoute
+  Compare72vRoute: typeof Compare72vRoute
+  ComponentsBatteriesRoute: typeof ComponentsBatteriesRoute
+  ComponentsControllersRoute: typeof ComponentsControllersRoute
+  ComponentsGearingRoute: typeof ComponentsGearingRoute
+  ComponentsMotorsRoute: typeof ComponentsMotorsRoute
+  GuidesSlugRoute: typeof GuidesSlugRoute
+  ToolsCurrentCheckRoute: typeof ToolsCurrentCheckRoute
+  ToolsRangeRoute: typeof ToolsRangeRoute
+  ToolsSpeedRoute: typeof ToolsSpeedRoute
+  BuildsIndexRoute: typeof BuildsIndexRoute
+  CompareIndexRoute: typeof CompareIndexRoute
+  ComponentsIndexRoute: typeof ComponentsIndexRoute
+  GuidesIndexRoute: typeof GuidesIndexRoute
+  ToolsIndexRoute: typeof ToolsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/updates': {
+      id: '/updates'
+      path: '/updates'
+      fullPath: '/updates'
+      preLoaderRoute: typeof UpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +346,158 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tools/': {
+      id: '/tools/'
+      path: '/tools'
+      fullPath: '/tools'
+      preLoaderRoute: typeof ToolsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/': {
+      id: '/guides/'
+      path: '/guides'
+      fullPath: '/guides'
+      preLoaderRoute: typeof GuidesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/': {
+      id: '/components/'
+      path: '/components'
+      fullPath: '/components'
+      preLoaderRoute: typeof ComponentsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/': {
+      id: '/compare/'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/builds/': {
+      id: '/builds/'
+      path: '/builds'
+      fullPath: '/builds'
+      preLoaderRoute: typeof BuildsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/speed': {
+      id: '/tools/speed'
+      path: '/tools/speed'
+      fullPath: '/tools/speed'
+      preLoaderRoute: typeof ToolsSpeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/range': {
+      id: '/tools/range'
+      path: '/tools/range'
+      fullPath: '/tools/range'
+      preLoaderRoute: typeof ToolsRangeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tools/current-check': {
+      id: '/tools/current-check'
+      path: '/tools/current-check'
+      fullPath: '/tools/current-check'
+      preLoaderRoute: typeof ToolsCurrentCheckRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides/$slug': {
+      id: '/guides/$slug'
+      path: '/guides/$slug'
+      fullPath: '/guides/$slug'
+      preLoaderRoute: typeof GuidesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/motors': {
+      id: '/components/motors'
+      path: '/components/motors'
+      fullPath: '/components/motors'
+      preLoaderRoute: typeof ComponentsMotorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/gearing': {
+      id: '/components/gearing'
+      path: '/components/gearing'
+      fullPath: '/components/gearing'
+      preLoaderRoute: typeof ComponentsGearingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/controllers': {
+      id: '/components/controllers'
+      path: '/components/controllers'
+      fullPath: '/components/controllers'
+      preLoaderRoute: typeof ComponentsControllersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/components/batteries': {
+      id: '/components/batteries'
+      path: '/components/batteries'
+      fullPath: '/components/batteries'
+      preLoaderRoute: typeof ComponentsBatteriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/72v': {
+      id: '/compare/72v'
+      path: '/compare/72v'
+      fullPath: '/compare/72v'
+      preLoaderRoute: typeof Compare72vRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/60v': {
+      id: '/compare/60v'
+      path: '/compare/60v'
+      fullPath: '/compare/60v'
+      preLoaderRoute: typeof Compare60vRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/52v': {
+      id: '/compare/52v'
+      path: '/compare/52v'
+      fullPath: '/compare/52v'
+      preLoaderRoute: typeof Compare52vRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare/48v': {
+      id: '/compare/48v'
+      path: '/compare/48v'
+      fullPath: '/compare/48v'
+      preLoaderRoute: typeof Compare48vRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/builds/$slug': {
+      id: '/builds/$slug'
+      path: '/builds/$slug'
+      fullPath: '/builds/$slug'
+      preLoaderRoute: typeof BuildsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  StartRoute: StartRoute,
+  UpdatesRoute: UpdatesRoute,
+  BuildsSlugRoute: BuildsSlugRoute,
+  Compare48vRoute: Compare48vRoute,
+  Compare52vRoute: Compare52vRoute,
+  Compare60vRoute: Compare60vRoute,
+  Compare72vRoute: Compare72vRoute,
+  ComponentsBatteriesRoute: ComponentsBatteriesRoute,
+  ComponentsControllersRoute: ComponentsControllersRoute,
+  ComponentsGearingRoute: ComponentsGearingRoute,
+  ComponentsMotorsRoute: ComponentsMotorsRoute,
+  GuidesSlugRoute: GuidesSlugRoute,
+  ToolsCurrentCheckRoute: ToolsCurrentCheckRoute,
+  ToolsRangeRoute: ToolsRangeRoute,
+  ToolsSpeedRoute: ToolsSpeedRoute,
+  BuildsIndexRoute: BuildsIndexRoute,
+  CompareIndexRoute: CompareIndexRoute,
+  ComponentsIndexRoute: ComponentsIndexRoute,
+  GuidesIndexRoute: GuidesIndexRoute,
+  ToolsIndexRoute: ToolsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
