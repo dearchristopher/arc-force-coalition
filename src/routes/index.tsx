@@ -32,7 +32,7 @@ function HomePage() {
             #1 DIY E-Moto Resource
           </h1>
           <p className="text-lg text-muted-foreground sm:text-xl">
-            Arc Force Coalition exists to serve one purpose: real, usable e-moto builds that reliable, durable, and fun. Let us answer the questions; you just enjoy the ride.
+            Arc Force Coalition exists to serve one purpose: real, usable e-moto builds that are reliable, durable, and fun. Let us answer the questions; you just enjoy the ride.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
